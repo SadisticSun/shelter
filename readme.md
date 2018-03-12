@@ -2,8 +2,18 @@
 
 # Shelter
 
-> A partially working Express server.
-> Can you fix and finish it?
+> A ~~partially~~ __working__ Express server.
+
+## About this project
+This project was an assignment for the Backend Development course at CMD, made by Titus Wormer. The assignment was to expand the current app with a working CRUD system.
+
+### How did it go?
+I must admit, I thought it would have taken me less time than it has. I had some prior experience with using Node and Express, but it seemed a little rusty. An excellent exercise! Also, I loved the cat pictures <3.
+Had some issues with handling the status codes as I had never really written handlers for them manually. My lovely colleague and classmate Jonah helped me with some parts, so a big thanks to him.
+
+Small point of feedback for the author: some images were missing ..?
+### What would I have done differently?
+I probably would have refactored the entire codebase to ES6 and a more OOP style with, for example, classes as an exercise for myself. Secondly, I would have liked to split up functionality (division of responsibilities) in a more MVC _(Model - View - Controller)_ style structure.
 
 ![](screenshot.png)
 
@@ -18,12 +28,6 @@ npm install
 npm run build # build and minify static files
 npm start # runs server on `localhost:1902`
 ```
-
-## Todo
-
-There’s a lot of things left to do.
-See the [assignment][] description for more info.
-
 ## Brief description of code
 
 ```txt
@@ -41,6 +45,7 @@ static/ - output of `src` after processing (these are sent to the browser)
 view/detail.ejs - ejs template for one animal
 view/list.ejs - ejs template for all animals
 view/error.ejs - ejs template for errors
+view/add.ejs - ejs template for adding a new animal
 ```
 
 ## Brief description of npm scripts
