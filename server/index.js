@@ -55,6 +55,9 @@ const getAll = (req, res) => {
 const getDetail = (req, res) => {
   // Animal ID, which is a param
   const id = req.params.id
+  if (isNaN(id)) 
+    return handleError([httpCodes.badRequest], res)
+  
   let animalExists
 
   // Try getting checking the database for the animal ID
