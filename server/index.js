@@ -3,6 +3,8 @@
 
 const fs            = require('fs')
 const express       = require('express')
+const compression   = require('compression')
+const helmet        = require('helmet')
 const multer        = require('multer')
 const contentType   = require('content-type')
 const HTTPStatus    = require('http-status')
@@ -203,6 +205,8 @@ const upload = multer({
 module.exports = express()
   .set('view engine', 'ejs')
   .set('views', 'view')
+  .use(helmet())
+  .use(compression())
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
   .use(express.static('static'))
